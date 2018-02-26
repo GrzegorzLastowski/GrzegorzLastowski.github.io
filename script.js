@@ -57,8 +57,11 @@ $(document).ready(function() {
       dataType: 'json',
       data: JSON.stringify({
         id: taskId,
-        title: taskTitle,
-        content: taskContent
+        //title: taskTitle,
+        item: taskTitle,
+        //content: taskContent
+        quantity: taskContent
+
       }),
       success: function(data) {
         parentEl.attr('data-task-id', data.id).toggleClass('datatable__row--editing');
